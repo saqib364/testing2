@@ -1,0 +1,581 @@
+:root {
+    --common-margin-left: 140px;
+    --large-banner-width: 72%;
+    --customer-logo-width: 200px;
+}
+
+.large-banner__wrapper {
+    position: relative;
+    width: var(--large-banner-width);
+    height: 34em;
+    background: rgb(5,21,142);
+    background: linear-gradient(90deg, rgba(5,21,142,1) 0%, rgba(15,86,199,1) 86%);
+    overflow: hidden;
+}
+
+.large-banner__image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #009ffd, #009ffd, #2a2a72, #2a2a72);
+    background-size: 400% 100%;
+    animation: gradient 6s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 0%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+.large-banner__image--inner {
+    background: rgb(5,21,142);
+    background: linear-gradient(90deg, rgba(42, 42, 114, 0.5) 0%, rgba(15,86,199,0.5) 86%);
+    width: 100%;
+    height: 100%;
+}
+
+#bg-wrap {
+    filter: contrast(75%);
+    opacity: 0.5;
+}
+
+.large-banner__content {
+    position: absolute;
+    top: 12rem;
+    left: var(--common-margin-left);
+    width: 29em;
+}
+
+.large-banner__title, 
+.large-banner__para, 
+.large-banner__link {
+    color: white;
+}
+
+.large-banner__title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.30;
+    margin-bottom: 1rem;
+}
+
+.large-banner__para {
+    font-size: .90rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.large-banner__para--bold {
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.large-banner__link {
+    font-size: .75rem;
+}
+
+.large-banner__link:hover {
+    color: blue;
+}
+
+.large-banner__link__text {
+    text-decoration: underline;
+}
+
+.large-banner__link__icon {
+    margin-left: 5px;
+}
+
+.feature-video__wrapper {
+    position: absolute;
+    top: 6.5em;
+    right: 14em;
+    width: 26em;
+    height: 32.5em;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.feature-video__content {
+    width: 100%;
+    border-radius: 12px;
+}
+
+.dotted-circle__wrapper {
+    position: absolute;
+    top: 425px;
+    right: 20px;
+    width: 22em;
+}
+
+.dotted-circle__content {
+    width: 60%;
+    opacity: 50%;
+}
+
+.customers__logo {
+    width: 100%;
+}
+
+.customers__wrapper {
+    width: 55%;
+    height: auto;
+    margin-left: var(--common-margin-left);
+}
+
+.customers__content {
+    padding: 12px;
+}
+
+.customers__logo {
+    width: var(--customer-logo-width);
+    padding: 24px 24px;
+}
+
+.nav__wrapper {
+    display: flex;
+}
+
+.nav__container--opaque {
+    background-color: white;
+    box-shadow: 1px 1px 27px -1px rgba(87, 85, 85, 0.75);
+    -webkit-box-shadow: 1px 1px 27px -1px rgba(87, 85, 85, 0.75);
+    -moz-box-shadow: 1px 1px 27px -1px rgba(87, 85, 85, 0.75);
+}
+
+.nav__container-left__wrapper.nav__container--opaque > 
+.nav__container-left > .nav__links > .nav__link {
+    color: black;
+}
+
+.nav__container-left__wrapper,
+.nav__container-right__wrapper {
+    position: fixed;
+    z-index: 3;
+}
+
+.nav__container-left__wrapper {
+    width: var(--large-banner-width); 
+}
+
+.nav__container-right__wrapper {
+    left: var(--large-banner-width);
+}
+
+.nav__container-left {
+    display: flex;
+    margin-left: var(--common-margin-left);
+}
+
+.nav__container-left > * {
+    display: inline-block;
+}
+
+.nav__brand {
+    width: 165px;
+    color: #000000;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nav__links {
+    flex-grow: 1;
+}
+
+.nav__container-left, .nav__container-right {
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+
+.nav__container-left > .nav__links {
+    text-align: right;
+    margin-right: 12px;
+    z-index: 1;
+}
+
+.nav__container-right > .nav__links {
+    margin-left: 6px;
+}
+
+.nav__container-left > .nav__links > .nav__link {
+    color: white;
+}
+
+.nav__brand > img {
+    width: 100%;
+    filter: invert(0);
+}
+
+.nav__container-right {
+    flex-grow: 1;
+}
+
+.space {
+    height: 60px;
+}
+
+.nav__link {
+    display: inline-block;
+    padding: 12px;
+    font-weight: 500;
+}
+
+.navbar {
+    margin-top: -100px;
+    transition: all 0.15s ease-in-out;
+}
+
+.navbar--open {
+    margin-top: 0px;
+}
+
+.navbar.navbar--open {
+    background-color: white;
+    box-shadow: 1px 1px 27px -1px rgba(54,52,52,0.75);
+    -webkit-box-shadow: 1px 1px 27px -1px rgba(54,52,52,0.75);
+    -moz-box-shadow: 1px 1px 27px -1px rgba(54,52,52,0.75);
+}
+
+.container-fluid.container-fluid--fit {
+    max-width: 76%;
+}
+
+.payment-option {
+    width: 100%;
+    border: none;
+    background-color: white;
+    text-transform: none;
+    color: #565151;
+}
+
+.payment-option--active {
+    box-shadow: 1px 1px 27px -1px rgba(54 52 52 / 15%);
+    webkit-box-shadow: 1px 1px 20px -1px rgb(54 52 52 / 15%);
+    -moz-box-shadow: 1px 1px 27px -1px rgba(54 52 52 / 15%);
+}
+
+.payment-option__title {
+    font-size: 2em;
+    color: #3c3c3c;
+}
+
+.payment-option__header {
+    font-size: 1.25em;
+    text-align: left;
+    font-weight: 500;
+}
+
+.payment-option__caption {
+    font-size: 1.10em;
+    text-align: left;
+}
+
+.payment-page {
+    position: relative;
+}
+
+.payment-page__image {
+    width: 70%;
+    padding-top: 25px;
+}
+
+.payment-page__logo {
+    position: absolute;
+    width: 120px;
+    transform: scale(0);
+}
+
+.payment-page__logo#banchnet {
+    left: -26px;
+    top: 57px;
+}
+
+.payment-page__logo#bpi {
+    right: -23px;
+    top: 106px;
+}
+
+.payment-page__logo#gcash {
+    left: -23px;
+    bottom: 30px;
+}
+
+.payment-page__logo#grabpay {
+    right: 23px;
+    bottom: -15px;
+}
+
+.payment-page__logo#mastercard {
+    right: 0;
+    bottom: 110px;
+}
+
+.payment-page__logo#visa {
+    left: 5px;
+    top: 185px;
+}
+
+@media screen and (max-width: 1350px) {
+    :root {
+        --common-margin-left: 4rem;
+        --large-banner-width: 75%;
+    }
+
+    .container-fluid.container-fluid--fit {
+        max-width: 92%;
+    }
+
+    .feature-video__wrapper {
+        top: 9.5em;
+        right: 12em;
+    }
+
+    .dotted-circle__wrapper {
+        top: 340px;
+        right: 88px;
+    }
+
+    .customers__wrapper {
+        width: 52%;
+    }
+}
+
+@media screen and (max-width: 1110px) {
+    :root {
+        --common-margin-left: 4rem;
+        --large-banner-width: 69%;
+    }
+
+    .feature-video__wrapper {
+        top: 9.5em;
+        right: 12.5em;
+    }
+
+    .dotted-circle__wrapper {
+        top: 338px;
+        right: 92px;
+    }
+
+    .customers__wrapper {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    :root {
+        --common-margin-left: 3rem;
+        --large-banner-width: 70%;
+    }
+
+    .feature-video__wrapper {
+        top: 9.5em;
+        right: 5.25em;
+    }
+
+    .dotted-circle__wrapper {
+        top: 338px;
+        right: -10px;
+    }
+
+    .large-banner__content {
+        position: absolute;
+        top: 10rem;
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .nav__container-left,
+    .nav__container-right {
+        display: none;
+    }
+
+    .navbar {
+        margin-top: 0px;
+    }
+
+
+    .navbar.bg-inverse {
+        background-color: #1d1d1d;
+    }
+
+    .container-fluid.container-fluid--fit {
+        max-width: 96%;
+    }
+
+    .space {
+        height: 120px;
+    }
+
+    :root {
+        --common-margin-left: 2rem;
+        --large-banner-width: 100%;
+    }
+
+    .feature-video__wrapper {
+        top: 9rem;
+        width: 20em;
+        right: 3.75rem;
+    }
+
+    .dotted-circle__wrapper {
+        position: absolute;
+        top: 390px;
+        right: -6px;
+        width: 18em;
+    }
+
+    .large-banner__content {
+        position: absolute;
+        top: 10rem;
+        width: 37%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .feature-video__wrapper,
+    .dotted-circle__wrapper {
+        display: none;
+    }
+
+    .space {
+        height: 20px;
+    }
+
+    .large-banner__content {
+        position: unset;
+        width: 100%;
+        text-align: center;
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .large-banner__wrapper {
+        height: 100%;
+    }
+
+    .customers__wrapper {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .customers__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .large-banner__image {
+        display: none;
+    }
+
+    .payment-page__logo#banchnet {
+        left: 40px;
+        top: 57px;
+    }
+
+    .payment-page__logo#bpi {
+        right: 59px;
+        top: 106px;
+    }
+
+    .payment-page__logo#gcash {
+        left: 83px;
+        bottom: 120px;
+    }
+
+    .payment-page__logo#grabpay {
+        right: 82px;
+        bottom: 57px;
+    }
+
+    .payment-page__logo#mastercard {
+        left: 40px;
+        top: 185px;
+    }
+
+    .payment-page__logo#visa {
+        right: 24px;
+        bottom: 181px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .payment-page__logo#banchnet {
+        left: -30px;
+        top: 3px;
+    }
+
+    .payment-page__logo#bpi {
+        right: -24px;
+        top: 21px;
+    }
+
+    .payment-page__logo#gcash {
+        left: -23px;
+        top: 90px;
+    }
+
+    .payment-page__logo#grabpay {
+        right: -28px;
+        bottom: 24px;
+    }
+
+    .payment-page__logo#mastercard {
+        left: 242px;
+        top: 104px;
+    }
+
+    .payment-page__logo#visa {
+        left: -40px;
+        bottom: 120px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .payment-page__logo {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .payment-page__logo#banchnet {
+        left: -6px;
+        top: 3px;
+    }
+
+    .payment-page__logo#bpi {
+        right: -10px;
+        top: 27px;
+    }
+
+    .payment-page__logo#gcash {
+        left: 2px;
+        bottom: 8px;
+    }
+
+    .payment-page__logo#grabpay {
+        right: 6px;
+        bottom: 24px;
+    }
+
+    .payment-page__logo#mastercard {
+        left: 8px;
+        top: 104px;
+    }
+
+    .payment-page__logo#visa {
+        right: -12px;
+        bottom: 99px;
+    }
+}
